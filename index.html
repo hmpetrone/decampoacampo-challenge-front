@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestión de Productos</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <h1>Gestión de Productos</h1>
+
+        <!-- Filtro por ID y Botón de Búsqueda y Crear -->
+        <div class="filtro">
+            <div class="grupo-busqueda">
+                <input type="number" id="buscar-id" placeholder="Buscar por ID">
+                <button onclick="buscarPorId()">Buscar</button>
+            </div>
+            <button id="boton-crear" onclick="mostrarFormularioCrear()">Crear Producto</button>
+        </div>
+
+        <!-- Vista de producto -->
+        <div id="vista-show-producto" style="display: none;">
+            <h2>Detalle Producto</h2>
+            <div id="detalle-producto"></div>
+            <button onclick="volverVista()">Volver a la lista</button>
+        </div>
+
+        <!-- Formulario para agregar un producto -->
+        <div id="errores-crear" class="errores" style="color: red;"></div>
+        <div id="formulario-crear" style="display: none;">
+            <h2>Agregar Producto</h2>
+            <form id="formulario-agregar-producto">
+                <input type="text" id="nombre-producto" placeholder="Nombre">
+                <input type="text" id="descripcion-producto" placeholder="Descripción">
+                <input type="number" id="precio-producto" placeholder="Precio en Pesos">
+                <button type="submit">Agregar Producto</button>
+                <button type="button" onclick="cancelarFormulario()">Cancelar</button>
+            </form>
+        </div>
+
+        <!-- Formulario para editar un producto -->
+        <div id="errores-editar" class="errores" style="color: red;"></div>
+        <div id="formulario-editar" style="display: none;">
+            <h2>Editar Producto</h2>
+            <form id="formulario-editar-producto">
+                <input type="text" id="nombre-producto-editar" placeholder="Nombre">
+                <input type="text" id="descripcion-producto-editar" placeholder="Descripción">
+                <input type="number" id="precio-producto-editar" placeholder="Precio en Pesos">
+                <button type="submit">Guardar Cambios</button>
+                <button type="button" onclick="cancelarFormulario()">Cancelar</button>
+            </form>
+        </div>
+
+        <!-- Tabla para mostrar los productos -->
+        <h2 id="titulo-productos">Lista de Productos</h2>
+        <table id="tabla-productos">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio (Pesos)</th>
+                <th>Precio (USD)</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="lista-productos">
+            </tbody>
+        </table>
+
+        <script src="app.js"></script>
+    </body>
+</html>

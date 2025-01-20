@@ -15,7 +15,7 @@ Este proyecto es una interfaz web sencilla para gestionar productos mediante una
 Clona este repositorio en tu máquina local utilizando el siguiente comando:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/hmpetrone/decampoacampo-challenge-front.git
 ```
 
 ### 2. Abrir el Proyecto en el Navegador
@@ -43,10 +43,10 @@ const apiUrl = 'http://<URL_DE_TU_BACKEND>/productos';
 ## Notas
 
 - **Cálculo del precio en dólares**: El precio en dólares se calcula dinámicamente en back end cada vez que se solicita un producto.
-- **Manejo de errores**: Los errores en la interacción con la API (como fallos en la conexión o validaciones fallidas) se validan en back end y se muestran al usuario en la interfaz.
+- **Manejo de errores**: Los errores en la interacción con la API (como fallos en la conexión o validaciones de campos) se validan en back end y se muestran al usuario en la interfaz.
 
 ## Feedback
 
-Estoy abierto a recibir tus observaciones o sugerencias que puedan ayudarme en futuros procesos de selección. Si tienes algún comentario, no dudes en enviarlo a mi correo personal: [hernan_hmp@hotmail.com](mailto:hernan_hmp@hotmail.com).
+Estoy abierto a recibir observaciones o sugerencias que puedan ayudarme en futuros procesos de selección. Si tienes algún comentario, no dudes en enviarlo a mi correo personal: [hernan_hmp@hotmail.com](mailto:hernan_hmp@hotmail.com).
 
 Gracias por la oportunidad y, en caso de no avanzar con el proceso, agradezco el tiempo invertido en la evaluación.
